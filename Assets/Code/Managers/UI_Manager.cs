@@ -69,6 +69,15 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    public void EnableAllUI()
+    {
+        foreach (var tab in tabs)
+        {
+            //Disabling all UI objects
+            tab.gameObjectReferance.SetActive(true);
+        }
+    }
+
     private void SelectNewUI(UI_Tabs _target)
     {
         foreach(var tab in tabs)
@@ -85,13 +94,23 @@ public class UI_Manager : MonoBehaviour
     {
         bool isItOkToChangeTabs = true;
 
-        //RULES TO BE IMPLEMENTED
+        //TO-DO RULES TO BE IMPLEMENTED
+        if(_target == UI_Tabs.STUDENT_GRADES_SCREEN)
+        {
+            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_STUDENT_GRADES_TEXT(PlayerPrefs.GetString("RoomCode"));
+            
 
+        }
+        else if (_target == UI_Tabs.MAIN_MENU_TEACHER_SCREEN)
+        {
+            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_MAIN_MENU_TEXT(PlayerPrefs.GetString("RoomCode"));
+        }
         return isItOkToChangeTabs;
     }
 
     private void QuitGame()
     {
+        Debug.Log("Exitting Game...");
         //Close the application completely
         Application.Quit();
     }
