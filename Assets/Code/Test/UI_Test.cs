@@ -11,7 +11,6 @@ public class UI_Test : MonoBehaviour
     public Button INSTRUCTIONS_SCREEN;
     public Button STUDENT_GRADES_SCREEN;
     public Button DIFFICULTY_SELECT_SCREEN;
-
     public Button SETTINGS_SCREEN;
     public Button QUIT;
 
