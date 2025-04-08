@@ -11,6 +11,8 @@ public class UI_Test : MonoBehaviour
     public Button INSTRUCTIONS_SCREEN;
     public Button STUDENT_GRADES_SCREEN;
     public Button DIFFICULTY_SELECT_SCREEN;
+
+    public Button SETTINGS_SCREEN;
     public Button QUIT;
 
     private void Start()
@@ -21,12 +23,18 @@ public class UI_Test : MonoBehaviour
         INSTRUCTIONS_SCREEN.onClick.AddListener(GOTO_INSTRUCTIONS_SCREEN);
         STUDENT_GRADES_SCREEN.onClick.AddListener(GOTO_STUDENT_GRADES_SCREEN);
         DIFFICULTY_SELECT_SCREEN.onClick.AddListener(GOTO_DIFFICULTY_SELECT_SCREEN);
+        SETTINGS_SCREEN.onClick.AddListener(GOTO_SETTINGSCREEN);
         QUIT.onClick.AddListener(GOTO_QUIT);
     }
 
     private void GOTO_LOGINSCREEN()
     {
         UI_Manager.Singleton.ChangeUITab(UI_Tabs.LOGIN_SCREEN);
+    }
+
+    private void GOTO_SETTINGSCREEN()
+    {
+        UI_Manager.Singleton.ChangeUITab(UI_Tabs.SETTINGS_SCREEN);
     }
 
     private void GOTO_MAIN_MENU_STUDENT_SCREEN()
