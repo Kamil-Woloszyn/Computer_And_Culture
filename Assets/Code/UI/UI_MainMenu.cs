@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_MainMenu : MonoBehaviour
@@ -127,18 +128,21 @@ public class UI_MainMenu : MonoBehaviour
     {
         Debug.Log("EASY DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
+        SceneManager.LoadScene(1);
     }
 
     private void StartGame_Student_MediumDifficulty()
     {
         Debug.Log("MEDIUM DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
+        SceneManager.LoadScene(1);
     }
 
     private void StartGame_Student_HardDifficulty()
     {
         Debug.Log("HARD DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
+        SceneManager.LoadScene(1);
     }
 
     private void GenerateNew_Teacher_JoinCode()

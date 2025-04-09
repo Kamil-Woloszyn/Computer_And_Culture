@@ -233,8 +233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 709, y: -72.820786}
+  m_SizeDelta: {x: 366.989, y: 358.494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209067192
 MonoBehaviour:
@@ -248,7 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c9547bd7cbd6040b75b92c375e7303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardInSlot: {fileID: 0}
 --- !u!114 &209067193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,11 +345,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 75
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -481,9 +480,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -95, y: -89}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 632.863, y: 118.66}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &484438668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,18 +505,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 60
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 60
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Score: 0    '
 --- !u!222 &484438669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -682,15 +681,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 68.1
+  m_fontSizeBase: 68.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -953,8 +952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.9749, y: -196.74203}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -579, y: -69.218}
+  m_SizeDelta: {x: 355.048, y: 355.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870076260
 MonoBehaviour:
@@ -1252,18 +1251,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006306100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 348304133}
-  m_Father: {fileID: 1101246841}
+  m_Father: {fileID: 2085824743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 624, y: 1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 402.60703, y: -409}
+  m_SizeDelta: {x: 692.126, y: 129.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006306102
 MonoBehaviour:
@@ -1379,13 +1378,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 572716204}
-  - {fileID: 1006306101}
   m_Father: {fileID: 2085824743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: -454}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -339, y: -409}
+  m_SizeDelta: {x: 703.574, y: 129.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101246842
 MonoBehaviour:
@@ -1786,21 +1784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a637ef35bee99e44af8a46cd334b54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 484438668}
-  messagePanel: {fileID: 109723970}
-  messageText: {fileID: 439219302}
-  inputField: {fileID: 0}
-  submitButton: {fileID: 1006306102}
-  levelCompletePanel: {fileID: 1647259268}
-  cardSpawnArea: {fileID: 969158794}
-  countryCardPrefab: {fileID: 4708799378477381724, guid: 9dde0b91e43489742991e3fd92a4cf9c, type: 3}
-  dropSlotPanel: {fileID: 209067190}
-  cardsPerLevel: 1
-  countryList:
-  - {fileID: 11400000, guid: 132a7e6762a9272419baa5080836fc9d, type: 2}
-  score: 0
-  currentCardIndex: 0
-  levelCountries: []
 --- !u!1 &1852969124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,6 +1957,7 @@ RectTransform:
   - {fileID: 1116822914}
   - {fileID: 209067191}
   - {fileID: 969158794}
+  - {fileID: 1006306101}
   - {fileID: 1101246841}
   - {fileID: 109723971}
   - {fileID: 1647259269}
