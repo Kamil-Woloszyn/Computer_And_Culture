@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: ad795ad8b9f5d29478784ca29de8f830
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 224, z: 403, w: 229}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: planet_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 418
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81ef96a704887f42b0323f9881fc2bf
+      internalID: 102526431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 418
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352fa54956f381f46b20d9008175622e
+      internalID: -1186097036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ff418d8a2ab6c42bd61fa29aa5b678
+      internalID: -450825751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 226
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65aeb16065d095b40b46202b5c24ed80
+      internalID: 1879806525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 226
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadeb8876f5d4cd48a4c2a658789b914
+      internalID: 2133605021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 226
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6820051d0f8a2214a8acdd9854262595
+      internalID: 1271408633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 191
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2eeda7e3f3ffa4c9089d845e05a74a
+      internalID: 1393898697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 34
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747e49e7c68fede428e93a90b9ace8a9
+      internalID: 1506350702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 21
+        width: 144
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8a76528399ddc42850419677b15488
+      internalID: -631992418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 136, y: -116}
+      - {x: 117, y: -146}
+      - {x: 117, y: -270}
+      - {x: 265, y: -270}
+      - {x: 265, y: -168}
+      - {x: 248, y: -116}
+    - - {x: -165, y: -125}
+      - {x: -238, y: -125}
+      - {x: -289, y: -156}
+      - {x: -289, y: -219}
+      - {x: -283, y: -234}
+      - {x: -248, y: -257}
+      - {x: -162, y: -257}
+      - {x: -95, y: -232}
+      - {x: -95, y: -186}
+      - {x: -149, y: -138}
+    - - {x: -67, y: -125}
+      - {x: -67, y: -230}
+      - {x: -62, y: -242}
+      - {x: -27, y: -257}
+      - {x: 41, y: -257}
+      - {x: 65, y: -237}
+      - {x: 65, y: -144}
+      - {x: 60, y: -125}
+    - - {x: -128, y: -209}
+      - {x: -127, y: -209}
+      - {x: -125, y: -207}
+      - {x: -123, y: -207}
+      - {x: -116, y: -203}
+      - {x: -110, y: -196}
+      - {x: -110, y: -188}
+      - {x: -115, y: -183}
+      - {x: -119, y: -180}
+      - {x: -122, y: -179}
+      - {x: -125, y: -179}
+      - {x: -118, y: -182}
+      - {x: -110, y: -187}
+      - {x: -110, y: -188}
+      - {x: -108, y: -194}
+      - {x: -110, y: -196}
+      - {x: -110, y: -199}
+      - {x: -120, y: -207}
+      - {x: -123, y: -207}
+      - {x: -125, y: -209}
+      - {x: -128, y: -209}
+      - {x: -130, y: -211}
+      - {x: -129, y: -211}
+    - - {x: -260, y: -209}
+      - {x: -262, y: -207}
+      - {x: -265, y: -207}
+      - {x: -267, y: -205}
+      - {x: -268, y: -205}
+      - {x: -272, y: -201}
+      - {x: -273, y: -201}
+      - {x: -276, y: -198}
+      - {x: -276, y: -196}
+      - {x: -277, y: -195}
+      - {x: -277, y: -191}
+      - {x: -275, y: -188}
+      - {x: -266, y: -182}
+      - {x: -271, y: -183}
+      - {x: -275, y: -188}
+      - {x: -275, y: -196}
+      - {x: -269, y: -203}
+      - {x: -267, y: -203}
+      - {x: -259, y: -209}
+      - {x: -258, y: -209}
+      - {x: -257, y: -210}
+      - {x: -257, y: -209}
+    - - {x: -127, y: -187}
+      - {x: -126, y: -192}
+      - {x: -127, y: -193}
+      - {x: -126, y: -193}
+    - - {x: -259, y: -188}
+      - {x: -259, y: -192}
+    - - {x: -142, y: 67}
+      - {x: -227, y: 67}
+      - {x: -258, y: 30}
+      - {x: -258, y: -44}
+      - {x: -223, y: -65}
+      - {x: -156, y: -65}
+      - {x: -146, y: -55}
+      - {x: -127, y: -28}
+      - {x: -127, y: 27}
+    - - {x: -28, y: 67}
+      - {x: -67, y: 53}
+      - {x: -67, y: -27}
+      - {x: -64, y: -50}
+      - {x: -36, y: -65}
+      - {x: 26, y: -65}
+      - {x: 65, y: -51}
+      - {x: 65, y: 41}
+      - {x: 47, y: 67}
+    - - {x: 247, y: 67}
+      - {x: 154, y: 67}
+      - {x: 125, y: 53}
+      - {x: 125, y: -39}
+      - {x: 158, y: -65}
+      - {x: 231, y: -65}
+      - {x: 257, y: -39}
+      - {x: 257, y: 38}
+      - {x: 249, y: 66}
+    - - {x: -223, y: 259}
+      - {x: -255, y: 245}
+      - {x: -259, y: 239}
+      - {x: -259, y: 158}
+      - {x: -241, y: 127}
+      - {x: -150, y: 127}
+      - {x: -140, y: 130}
+      - {x: -127, y: 163}
+      - {x: -127, y: 235}
+      - {x: -149, y: 259}
+    - - {x: -49, y: 259}
+      - {x: -67, y: 228}
+      - {x: -67, y: 141}
+      - {x: -52, y: 127}
+      - {x: 34, y: 127}
+      - {x: 65, y: 149}
+      - {x: 65, y: 224}
+      - {x: 34, y: 259}
+    - - {x: 143, y: 259}
+      - {x: 125, y: 231}
+      - {x: 125, y: 139}
+      - {x: 128, y: 127}
+      - {x: 257, y: 127}
+      - {x: 257, y: 239}
+      - {x: 239, y: 259}
+    physicsShape:
+    - - {x: -255, y: -63}
+      - {x: -255, y: 77}
+      - {x: -119, y: 77}
+      - {x: -119, y: -63}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      planet_Sheet_0: 102526431
+      planet_Sheet_1: -1186097036
+      planet_Sheet_2: -450825751
+      planet_Sheet_3: 1879806525
+      planet_Sheet_4: 2133605021
+      planet_Sheet_5: 1271408633
+      planet_Sheet_6: 1393898697
+      planet_Sheet_7: 1506350702
+      planet_Sheet_8: -631992418
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
