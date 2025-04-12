@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d81539edf16494f90d830bf90de2d5, type: 3}
   m_Name: Ireland
   m_EditorClassIdentifier: 
-  countryName: 
+  countryName: Ireland
   countryImage: {fileID: 0}
   funFact: 
