@@ -7,8 +7,4 @@ using UnityEngine;
 public class DraggableCountry : MonoBehaviour
 {
     public CountryData data; // Is set at spawn time from GameManager
-
-
-
-
 }

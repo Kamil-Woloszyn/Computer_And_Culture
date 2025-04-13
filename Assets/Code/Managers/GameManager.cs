@@ -9,13 +9,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     // === UI References ===
-    public Text scoreText;
     public GameObject messagePanel;
     public Text messageText;
     public InputField inputField; 
     public Button submitButton;
-    public GameObject levelCompletePanel;
-    public Button mainMenuButton;
 
     // === Spawn/Slot References ===
     public RectTransform cardSpawnArea;
@@ -32,11 +29,11 @@ public class GameManager : MonoBehaviour
     private GameObject currentCard;
     private SlotManager slotManager;
     private int score = 0;
+    private int attemptsPerCard = 3;
 
     void Start()
     {
         SetupLevel();
-        mainMenuButton.onClick.AddListener(ReturnToMainMenu);
     }
 
     private void ReturnToMainMenu()
@@ -77,12 +74,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        currentCardIndex = 0;
-        score = 0;
-        scoreText.text = "Score: 0";
-
         slotManager = dropSlotPanel.GetComponent<SlotManager>();
-        levelCompletePanel.SetActive(false);
         messagePanel.SetActive(false);
         inputField.gameObject.SetActive(false);
         submitButton.gameObject.SetActive(false);
@@ -95,13 +87,13 @@ public class GameManager : MonoBehaviour
     {
         if (currentCardIndex >= levelCountries.Count)
         {
-            levelCompletePanel.SetActive(true);
+            UI_Manager.Singleton.ChangeUITab(UI_Tabs.GAME_GAMEOVER_SCREEN);
             return;
         }
 
         CountryData data = levelCountries[currentCardIndex];
         currentCard = Instantiate(countryCardPrefab, cardSpawnArea);
-        currentCard.GetComponent<Image>().sprite = data.countryImage;
+        currentCard.GetComponentInChildren<Image>().sprite = data.countryImage;
 
         // Assign country data to the card
         var dragScript = currentCard.GetComponent<DraggableCountry>();
@@ -127,8 +119,7 @@ public class GameManager : MonoBehaviour
 
         if (input == answer)
         {
-            score++;
-            scoreText.text = "Score: " + score;
+            ScoreManager.Singleton.UpdateScore();
 
             // Pulls the fun fact from FactManager
             string fact = FactManager.Instance.GetFact(input);
@@ -138,7 +129,16 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            ShowMessage("Wrong answer. Try again!", false); // 'false' means wrong
+            attemptsPerCard--;
+            //Checking amount of attempts left
+            if(attemptsPerCard <= 0)
+            {
+                ShowMessage("No Attempts Left... Spawning New Card", false); // 'false' means wrong
+            }
+            else
+            {
+                ShowMessage("Wrong answer. Try again!\n Attempts Left: " + attemptsPerCard + " out of 3", false); // 'false' means wrong
+            }
         }
     }
 
@@ -159,8 +159,25 @@ public class GameManager : MonoBehaviour
         {
             submitButton.gameObject.SetActive(true);
             inputField.gameObject.SetActive(true);
-
+            
             StartCoroutine(HideMessageAfterDelay(3f));
+            //Checking amout of attempts left
+            if (attemptsPerCard <= 0)
+            {
+                //If no attempts left destroy this card and generate a new one
+                Destroy(currentCard);
+                slotManager.ClearSlot();
+
+                currentCardIndex++;
+                SpawnNextCard();
+                //Disabling Card Guessing Buttons
+                submitButton.gameObject.SetActive(false);
+                inputField.gameObject.SetActive(false);
+
+                //Reseting Variable To Default Value
+                attemptsPerCard = 3;
+            }
+
         }
     }
 
@@ -174,7 +191,7 @@ public class GameManager : MonoBehaviour
     // Waits after a correct answer, then spawns the next card
     IEnumerator DelayedNextCard()
     {
-        yield return new WaitForSeconds(10f); // shows a fact for 10 seconds
+        yield return new WaitForSeconds(8f); // shows a fact for 8 seconds
         messagePanel.SetActive(false);
 
         Destroy(currentCard);
