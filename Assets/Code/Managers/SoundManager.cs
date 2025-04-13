@@ -34,12 +34,14 @@ public class SoundManager : MonoBehaviour
         TargetAudioSource = GetComponent<AudioSource>();
         Debug.Log(TargetAudioSource == null ? "TargetAudioSource for button clicks Not Found" : "TargetAudioSource for button clicks Found");
         int i = 0;
+        Debug.Log("Adding Button Sounds...");
         //Adding the listener to all of the buttons added to the script in the inspector
         foreach (Button button in allButtonsInScene)
         {
             button.onClick.AddListener(ButtonClickedSound);
-            Debug.Log("Added Button: " + i++ + "  Instance ID: "+button.GetInstanceID());
+            Debug.Log("Added Button: " + i++ + "  Instance ID: " + button.GetInstanceID() + "  Name: " + button.name);
         }
+        Debug.Log("Adding Button Sounds Completed Successfully! Total Buttons Added: " + i);
     }
 
     /// <summary>
