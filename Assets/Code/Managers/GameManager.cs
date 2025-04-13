@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public GameObject messagePanel;
     public Text messageText;
-    public InputField inputField; // Legacy UI version
+    public InputField inputField; 
     public Button submitButton;
     public GameObject levelCompletePanel;
     public Button mainMenuButton;
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    // 🔁 Choose which cards to use
+    // Chooses which cards to use
     void SetupLevel()
     {
         levelCountries.Clear();
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // Just take first N cards if random not enabled
+            // Just takes first N cards if randomizer checkbox is not enabled
             for (int i = 0; i < Mathf.Min(cardsPerLevel, countryList.Count); i++)
             {
                 levelCountries.Add(countryList[i]);
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         SpawnNextCard();
     }
 
-    // 🃏 Spawns the next country card into the UI
+    // Spawns the next country card into the UI
     void SpawnNextCard()
     {
         if (currentCardIndex >= levelCountries.Count)
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         dragScript.data = data;
     }
 
-    // 🟩 Called by SlotManager when card is dropped into slot
+    // Called by SlotManager when a card is dropped into slot
     public void ShowInputField(DraggableCountry card)
     {
         inputField.text = "";
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
         submitButton.onClick.AddListener(() => CheckAnswer(card));
     }
 
-    // ✅ Check if the player's input matches the country's name
+    // Checks if the player's input matches the country's name
     void CheckAnswer(DraggableCountry card)
     {
         string input = inputField.text.Trim().ToLower();
@@ -129,15 +129,20 @@ public class GameManager : MonoBehaviour
         {
             score++;
             scoreText.text = "Score: " + score;
-            ShowMessage("Correct!\n\n" + card.data.funFact, true);
+
+            // Pulls the fun fact from FactManager
+            string fact = FactManager.Instance.GetFact(input);
+            string message = $"Correct!\n\n{fact}";
+
+            ShowMessage(message, true); // 'true' means correct, triggers destruction and card spawn
         }
         else
         {
-            ShowMessage("Wrong answer.", false);
+            ShowMessage("Wrong answer. Try again!", false); // 'false' means wrong
         }
     }
 
-    // 💬 Display message on screen, whether correct or wrong
+    // Displays message on screen, whether correct or wrong
     void ShowMessage(string message, bool correct)
     {
         messageText.text = message;
@@ -159,17 +164,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // ✅ Hide message after 3 seconds (for wrong answers)
+    // Hides message after 3 seconds (for wrong answers)
     IEnumerator HideMessageAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         messagePanel.SetActive(false);
     }
 
-    // ✅ Wait after correct answer, then spawn next
+    // Waits after a correct answer, then spawns the next card
     IEnumerator DelayedNextCard()
     {
-        yield return new WaitForSeconds(10f); // show fact for 10 seconds
+        yield return new WaitForSeconds(10f); // shows a fact for 10 seconds
         messagePanel.SetActive(false);
 
         Destroy(currentCard);

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06d81539edf16494f90d830bf90de2d5, type: 3}
-  m_Name: Ireland
+  m_Name: Egypt
   m_EditorClassIdentifier: 
-  countryName: Ireland
-  countryImage: {fileID: 21300000, guid: 1ca1fcc42cfc69c4c9044021568018be, type: 3}
-  funFact: Alcoholism
+  countryName: Egypt
+  countryImage: {fileID: 21300000, guid: 70165fe901b68e44ebe7fb95bbf36538, type: 3}
+  funFact: 

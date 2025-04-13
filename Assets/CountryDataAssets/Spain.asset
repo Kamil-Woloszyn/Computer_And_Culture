@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spain
   m_EditorClassIdentifier: 
   countryName: Spain
-  countryImage: {fileID: 0}
+  countryImage: {fileID: 21300000, guid: 5f227c0882ea5f4468b1bb37ff2b09d3, type: 3}
   funFact: 'Espania
 
 '

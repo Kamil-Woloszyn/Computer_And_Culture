@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Italy
   m_EditorClassIdentifier: 
   countryName: Italy
-  countryImage: {fileID: 0}
+  countryImage: {fileID: 21300000, guid: 9605aff7ff8ec4c4ca682d3c4cc6332a, type: 3}
   funFact: Spaghetti Mama mia
