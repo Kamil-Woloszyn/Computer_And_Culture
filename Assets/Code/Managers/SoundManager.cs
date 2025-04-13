@@ -28,11 +28,13 @@ public class SoundManager : MonoBehaviour
     {
         TargetAudioSource = GetComponent<AudioSource>();
         int i = 0;
+        Debug.Log("Adding Button Sounds...");
         foreach (Button button in allButtonsInScene)
         {
             button.onClick.AddListener(ButtonClickedSound);
-            Debug.Log("Added Button: " + i++ + "  Instance ID: "+button.GetInstanceID());
+            Debug.Log("Added Button: " + i++ + "  Instance ID: " + button.GetInstanceID() + "  Name: " + button.name);
         }
+        Debug.Log("Adding Button Sounds Completed Successfully! Total Buttons Added: " + i);
     }
 
     public void ButtonClickedSound()
