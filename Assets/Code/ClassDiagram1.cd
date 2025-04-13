@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VolumeControl" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAGAAAAAAEACIAAAAAAQAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\AudioCode\VolumeControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardDrag" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAAAACAAAAAAAABAEAACAAAAACCAgAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Code\DragNDrop\CardDrag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_MainMenu" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBBACIAACDAAAEEAgAhAAAAJAgBIAFgLAAEEgQAEEA=</HashCode>
+      <FileName>Assets\Code\UI\UI_MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Gameplay" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAAAAAAAgAAAAAAAAAAAEAAABAQAAAAEA=</HashCode>
+      <FileName>Assets\Code\UI\UI_Gameplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Button_Behaviours" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAACwAAAAgAAQAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Code\UI\UI_Button_Behaviours.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Test" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIEAAACAVAAAQAAAAAAgAAQASAACBAQAhAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Test\UI_Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSwitcher" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Test\SwitchScenes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Manager" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="UI_Manager.UI_OBJECTS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Code\Managers\UI_Manager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAKIAAAAAAAAAAIQAAAAAAAEAAAhAAgEkAEA=</HashCode>
+      <FileName>Assets\Code\Managers\UI_Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherManager" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAQAAAABAAAAAAAAAAAAAAAAAAAAAAAAQAAAQ=</HashCode>
+      <FileName>Assets\Code\Managers\TeacherCodeCreateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentManager" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAGAAAAEAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Code\Managers\StudentJoinCodeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAQAAAABAABAAAAIAAAIAAAAgAA=</HashCode>
+      <FileName>Assets\Code\Managers\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlotManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAgAAAIAAAAAAAAQAAAAQAA=</HashCode>
+      <FileName>Assets\Code\Managers\SlotManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.14" />
+  </Class>
+  <Class Name="ScoreManager" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIDAAAAQAAEAIgAAgAAEIAAEAAgAgAAAIAEA=</HashCode>
+      <FileName>Assets\Code\Managers\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAJkEEDAcIAQAEAYKAQAAAAAAEAAAQAAEAEAIAEA=</HashCode>
+      <FileName>Assets\Code\Managers\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactManager" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIQEA=</HashCode>
+      <FileName>Assets\Code\Managers\FactManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextInput" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACIQAAAAAEAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Input\CountryTextInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DraggableCountry" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Gameplay\DraggableCountry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CountryData" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Gameplay\CountryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="UnityEngine.ScriptableObject" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="UI_Tabs" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAIAAAAAAFAAAAAAAAAAAAAAASAACAAQABAAEAAAA=</HashCode>
+      <FileName>Assets\Code\Enums\UI_Tabs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

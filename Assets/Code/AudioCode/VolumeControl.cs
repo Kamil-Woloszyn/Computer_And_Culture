@@ -39,11 +39,19 @@ public class VolumeControl : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to change the volume based on value passed in
+    /// </summary>
+    /// <param name="value"></param>
     void ChangeVolume(float value)
     {
         audioSource.volume = value / 4;
     }
 
+    /// <summary>
+    /// Function to change tracks manually
+    /// </summary>
+    /// <param name="clip"></param>
     void ChangeTrack(AudioClip clip)
     {
         audioSource.clip = clip;

@@ -5460,7 +5460,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dbf29ab5d7fbf65489ea2744f04b58a0, type: 3}
   - {fileID: 8300000, guid: 55b5af20392848c479bb3967f3b31914, type: 3}
   - {fileID: 8300000, guid: a8069dcccd6d5ed428f8a962b5599a67, type: 3}
-  - {fileID: 8300000, guid: 2f9b212cb14369c4fa260df0dafdb55d, type: 3}
+  - {fileID: 8300000, guid: 55b5af20392848c479bb3967f3b31914, type: 3}
+  - {fileID: 8300000, guid: 55b5af20392848c479bb3967f3b31914, type: 3}
+  - {fileID: 8300000, guid: 55b5af20392848c479bb3967f3b31914, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

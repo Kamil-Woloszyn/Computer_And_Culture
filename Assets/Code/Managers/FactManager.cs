@@ -34,6 +34,11 @@ public class FactManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Function for getting the fact from the country name 
+    /// </summary>
+    /// <param name="countryName"></param>
+    /// <returns></returns>
     public string GetFact(string countryName)
     {
         countryName = countryName.Trim();

@@ -62,6 +62,7 @@ public class ScoreManager : MonoBehaviour
         {
             highscore = score;
             PlayerPrefs.SetInt("PlayerHighScore", (int)score);
+            PlayerPrefs.Save();
             UpdateHighscoreUI();
         }
         UpdateScoreUI();

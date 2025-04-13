@@ -149,7 +149,6 @@ public class TextInput : MonoBehaviour
         { "micronesia", "Micronesia has ancient stone ruins on the island of Pohnpei." }
     };
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -159,9 +158,7 @@ public class TextInput : MonoBehaviour
 
     void OnSubmit()
     {
-        
         string countryName = countryInput.text.ToLower().Trim();
-
         if (countryFacts.ContainsKey(countryName))
         {
             factText.text = countryFacts[countryName];
@@ -170,8 +167,6 @@ public class TextInput : MonoBehaviour
         {
             factText.text = $"No fact available for \"{countryName}\".";
         }
-
         factPanel.SetActive(true);
-        
     }
 }

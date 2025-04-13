@@ -47,6 +47,10 @@ public class UI_Manager : MonoBehaviour
         SelectNewUI(currentTab);
     }
 
+    /// <summary>
+    /// Public function which goes through validation before chaning tabs
+    /// </summary>
+    /// <param name="target"></param>
     public void ChangeUITab(UI_Tabs target)
     {
         if (currentTab == target) return;
@@ -58,12 +62,44 @@ public class UI_Manager : MonoBehaviour
         previousTab = currentTab;
         currentTab = target;
     }
-    
-    
 
+    /// <summary>
+    /// Function which has custom rulesets which control whether or not actions are allowed in the UI
+    /// </summary>
+    /// <param name="_target"></param>
+    /// <returns></returns>
+    private bool ValidateTabChange(UI_Tabs _target)
+    {
+        bool isItOkToChangeTabs = true;
+
+        //TO-DO RULES TO BE IMPLEMENTED - Special Behaviours 
+        if (_target == UI_Tabs.STUDENT_GRADES_SCREEN)
+        {
+            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_STUDENT_GRADES_TEXT(PlayerPrefs.GetString("RoomCode"));
+        }
+        else if (_target == UI_Tabs.MAIN_MENU_TEACHER_SCREEN)
+        {
+            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_MAIN_MENU_TEXT(PlayerPrefs.GetString("RoomCode"));
+        }
+        else if (_target == UI_Tabs.GAME_GAMEPLAY_SCREEN)
+        {
+            SceneManager.LoadScene(1);
+            ingame_Flag = true;
+        }
+        else if (_target == UI_Tabs.MAIN_MENU_STUDENT_SCREEN && (currentTab == UI_Tabs.GAME_GAMEPLAY_SCREEN || currentTab == UI_Tabs.GAME_HELP_INSTRUCTIONS_SCREEN || currentTab == UI_Tabs.GAME_GAMEOVER_SCREEN))
+        {
+            SceneManager.LoadScene(0);
+
+            ingame_Flag = true;
+        }
+        return isItOkToChangeTabs;
+    }
+
+    /// <summary>
+    /// Function to go back to the previous tab 
+    /// </summary>
     public void UI_GoBack()
     {
-
         Debug.Log("Going Back, Current Tab: " + currentTab + " , Previous Tab: " + previousTab);
         DisableAllUI();
         SelectNewUI(previousTab);
@@ -73,6 +109,9 @@ public class UI_Manager : MonoBehaviour
         currentTab = temp;
     }
 
+    /// <summary>
+    /// Function to disable all UI elements references active in the scene
+    /// </summary>
     private void DisableAllUI()
     {
         foreach (var tab in tabs)
@@ -82,6 +121,9 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to enable all UI (has not been used yet)
+    /// </summary>
     public void EnableAllUI()
     {
         foreach (var tab in tabs)
@@ -91,6 +133,10 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to select a new UI based on passed in target
+    /// </summary>
+    /// <param name="_target"></param>
     private void SelectNewUI(UI_Tabs _target)
     {
         foreach(var tab in tabs)
@@ -103,33 +149,9 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    private bool ValidateTabChange(UI_Tabs _target)
-    {
-        bool isItOkToChangeTabs = true;
-
-        //TO-DO RULES TO BE IMPLEMENTED - Special Behaviours 
-        if(_target == UI_Tabs.STUDENT_GRADES_SCREEN)
-        {
-            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_STUDENT_GRADES_TEXT(PlayerPrefs.GetString("RoomCode"));
-        }
-        else if (_target == UI_Tabs.MAIN_MENU_TEACHER_SCREEN)
-        {
-            UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_MAIN_MENU_TEXT(PlayerPrefs.GetString("RoomCode"));
-        }
-        else if(_target == UI_Tabs.GAME_GAMEPLAY_SCREEN)
-        {
-            SceneManager.LoadScene(1);
-            ingame_Flag = true;
-        }
-        else if(_target == UI_Tabs.MAIN_MENU_STUDENT_SCREEN && (currentTab == UI_Tabs.GAME_GAMEPLAY_SCREEN || currentTab == UI_Tabs.GAME_HELP_INSTRUCTIONS_SCREEN || currentTab == UI_Tabs.GAME_GAMEOVER_SCREEN))
-        {
-            SceneManager.LoadScene(0);
-
-            ingame_Flag = true;
-        }
-        return isItOkToChangeTabs;
-    }
-
+    /// <summary>
+    /// Function to quit the game
+    /// </summary>
     private void QuitGame()
     {
         Debug.Log("Exitting Game...");
@@ -137,11 +159,19 @@ public class UI_Manager : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// Function to get the current tab
+    /// </summary>
+    /// <returns></returns>
     public UI_Tabs GetCurrentTab()
     {
         return currentTab;
     }
 
+    /// <summary>
+    /// Function to get the previous tab
+    /// </summary>
+    /// <returns></returns>
     public UI_Tabs GetPreviousTab()
     {
         return currentTab;
