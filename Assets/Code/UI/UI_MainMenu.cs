@@ -1,9 +1,11 @@
+/*
+ * CREATED BY: KAMIL WOLOSZYN
+ * DATE: 5th March 2025
+ * FUNCTION: Script for controlling more detailed tasks in the main menu 
+ */
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_MainMenu : MonoBehaviour
@@ -126,23 +128,26 @@ public class UI_MainMenu : MonoBehaviour
 
     private void StartGame_Student_EasyDifficulty()
     {
+        PlayerPrefs.SetInt("DifficultyMultiplier", 1);
         Debug.Log("EASY DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
-        SceneManager.LoadScene(1);
+        UI_Manager.Singleton.ChangeUITab(UI_Tabs.GAME_GAMEPLAY_SCREEN);
     }
 
     private void StartGame_Student_MediumDifficulty()
     {
+        PlayerPrefs.SetInt("DifficultyMultiplier", 2);
         Debug.Log("MEDIUM DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
-        SceneManager.LoadScene(1);
+        UI_Manager.Singleton.ChangeUITab(UI_Tabs.GAME_GAMEPLAY_SCREEN);
     }
 
     private void StartGame_Student_HardDifficulty()
     {
+        PlayerPrefs.SetInt("DifficultyMultiplier", 4);
         Debug.Log("HARD DIFFICULTY SELECTED... STARTING GAME...");
         //TO-DO ADD BEHAVIOUR FOR CHANGING SCENES
-        SceneManager.LoadScene(1);
+        UI_Manager.Singleton.ChangeUITab(UI_Tabs.GAME_GAMEPLAY_SCREEN);
     }
 
     private void GenerateNew_Teacher_JoinCode()

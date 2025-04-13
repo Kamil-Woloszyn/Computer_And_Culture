@@ -1,3 +1,8 @@
+/*
+ * CREATED BY: KAMIL WOLOSZYN
+ * DATE: 7th April 2025
+ * FUNCTION: Functions to store function calls to change UI screen, to be assigned in the inspector
+ */
 using UnityEngine;
 
 public class UI_Button_Behaviours : MonoBehaviour

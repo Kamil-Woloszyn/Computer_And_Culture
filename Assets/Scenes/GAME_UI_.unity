@@ -652,7 +652,7 @@ MonoBehaviour:
     key: 9
   - gameObjectReferance: {fileID: 388325550}
     key: 10
---- !u!4 &322322988
+  ingame_Flag: 1
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

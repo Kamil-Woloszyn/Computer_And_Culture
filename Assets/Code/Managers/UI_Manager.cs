@@ -1,10 +1,15 @@
+/*
+ * CREATED BY: KAMIL WOLOSZYN
+ * DATE: 10th March 2025
+ * FUNCTION: Script for the UI System called UI_Manager which controls all behaviour relating to changing screens
+ */
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
+
     [Serializable]
     public class UI_OBJECTS
     {
@@ -17,6 +22,9 @@ public class UI_Manager : MonoBehaviour
 
     private UI_Tabs currentTab = UI_Tabs.LOGIN_SCREEN;
     private UI_Tabs previousTab = UI_Tabs.QUIT;
+    [SerializeField]
+    public bool ingame_Flag = false;
+    
     public static UI_Manager Singleton = null;
     private void Awake()
     {
@@ -27,11 +35,15 @@ public class UI_Manager : MonoBehaviour
         else
         {
             Singleton = this;
-            DontDestroyOnLoad(Singleton);
         }
     }
     private void Start()
     {
+        if(ingame_Flag)
+        {
+            currentTab = UI_Tabs.GAME_GAMEPLAY_SCREEN;
+        }
+        previousTab = currentTab;
         SelectNewUI(currentTab);
     }
 
@@ -51,9 +63,10 @@ public class UI_Manager : MonoBehaviour
 
     public void UI_GoBack()
     {
+
+        Debug.Log("Going Back, Current Tab: " + currentTab + " , Previous Tab: " + previousTab);
         DisableAllUI();
         SelectNewUI(previousTab);
-
         //Rotating the tabs around as we do not save any previous tabs (creating an infinite tab loop possible be careful)
         UI_Tabs temp = previousTab;
         previousTab = currentTab;
@@ -94,16 +107,25 @@ public class UI_Manager : MonoBehaviour
     {
         bool isItOkToChangeTabs = true;
 
-        //TO-DO RULES TO BE IMPLEMENTED
+        //TO-DO RULES TO BE IMPLEMENTED - Special Behaviours 
         if(_target == UI_Tabs.STUDENT_GRADES_SCREEN)
         {
             UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_STUDENT_GRADES_TEXT(PlayerPrefs.GetString("RoomCode"));
-            
-
         }
         else if (_target == UI_Tabs.MAIN_MENU_TEACHER_SCREEN)
         {
             UI_MainMenu.Singleton.SET_TEACHER_JOIN_CODE_MAIN_MENU_TEXT(PlayerPrefs.GetString("RoomCode"));
+        }
+        else if(_target == UI_Tabs.GAME_GAMEPLAY_SCREEN)
+        {
+            SceneManager.LoadScene(1);
+            ingame_Flag = true;
+        }
+        else if(_target == UI_Tabs.MAIN_MENU_STUDENT_SCREEN && (currentTab == UI_Tabs.GAME_GAMEPLAY_SCREEN || currentTab == UI_Tabs.GAME_HELP_INSTRUCTIONS_SCREEN || currentTab == UI_Tabs.GAME_GAMEOVER_SCREEN))
+        {
+            SceneManager.LoadScene(0);
+
+            ingame_Flag = true;
         }
         return isItOkToChangeTabs;
     }
