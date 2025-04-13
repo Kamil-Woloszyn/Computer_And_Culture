@@ -1,5 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+ * CREATED BY: KAMIL WOLOSZYN
+ * DATE: 11th March 2025
+ * FUNCTION: Test & Use Example of UI System functionality in script form
+ */
 using UnityEngine;
 using UnityEngine.UI;
 
