@@ -1,4 +1,8 @@
-using System.Collections;
+/*
+ * CREATED BY: KAMIL WOLOSZYN
+ * DATE: 24th March 2025
+ * FUNCTION: Adding sounds to the button objects on clicking them
+ */
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -26,9 +30,12 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        //Function targetting the audio source on the gameobject itself
         TargetAudioSource = GetComponent<AudioSource>();
+        Debug.Log(TargetAudioSource == null ? "TargetAudioSource for button clicks Not Found" : "TargetAudioSource for button clicks Found");
         int i = 0;
         Debug.Log("Adding Button Sounds...");
+        //Adding the listener to all of the buttons added to the script in the inspector
         foreach (Button button in allButtonsInScene)
         {
             button.onClick.AddListener(ButtonClickedSound);
@@ -37,8 +44,12 @@ public class SoundManager : MonoBehaviour
         Debug.Log("Adding Button Sounds Completed Successfully! Total Buttons Added: " + i);
     }
 
+    /// <summary>
+    /// Function which plays a button click sound when a button is pressed
+    /// </summary>
     public void ButtonClickedSound()
     {
+        
         TargetAudioSource.pitch = Random.Range(0.9f, 1.1f);
         if (TargetAudioSource.clip == null)
         {
