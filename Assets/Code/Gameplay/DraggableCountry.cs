@@ -6,5 +6,9 @@ using UnityEngine;
 // deez nutz, ma name Jeff
 public class DraggableCountry : MonoBehaviour
 {
-    public CountryData data;  // Set at spawn time from GameManager
+    public CountryData data; // Is set at spawn time from GameManager
+
+
+
+
 }
