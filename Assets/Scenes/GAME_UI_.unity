@@ -653,7 +653,6 @@ MonoBehaviour:
   - gameObjectReferance: {fileID: 388325550}
     key: 10
   ingame_Flag: 1
---- !u!4 &322322988
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -680,6 +679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb755b38c3eb3ac4a86ea23d39539d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  highscore: 0
+  multiplier: 0
   scoreTextReference: {fileID: 2025500942}
   highScoreTextReference: {fileID: 1838222392}
   afterGameScoreTextReference: {fileID: 531861068}

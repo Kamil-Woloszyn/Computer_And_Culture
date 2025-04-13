@@ -44,11 +44,11 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
-        // Optional fallback: snap back if not accepted by a drop slot
+       
         if (transform.parent == originalParent)
         {
             rectTransform.anchoredPosition = originalPosition;
-            Debug.Log("🔁 Snapback - card not dropped in a valid slot.");
+            Debug.Log("Snapback - card not dropped in a valid slot.");
         }
     }
 }
